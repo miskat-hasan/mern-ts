@@ -3,4 +3,6 @@ import { Router } from "express";
 
 const router = Router();
 
-router.get('/', getUsers)
+// router.get('/', getUsers)
+
+export const StudentRouter = router

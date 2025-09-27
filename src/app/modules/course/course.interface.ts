@@ -20,7 +20,7 @@ export interface ICourse {
   courseDetails: string;
   courseOverview: string;
   curriculum: string[];
-  courseInclues: string[];
-  softwareInclues: string[];
+  courseIncludes: string[];
+  softwareIncludes: string[];
   jobOption: string[];
 }

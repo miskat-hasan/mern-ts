@@ -27,13 +27,13 @@ const courseSchema = new Schema<ICourse>(
         required: true,
       },
     ],
-    courseInclues: [
+    courseIncludes: [
       {
         type: String,
         required: true,
       },
     ],
-    softwareInclues: [
+    softwareIncludes: [
       {
         type: String,
         required: true,
