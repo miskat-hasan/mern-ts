@@ -5,4 +5,4 @@ const router = Router()
 
 router.post('/', createUser)
 
-export const UserRouter = router
+// export const UserRouter = router

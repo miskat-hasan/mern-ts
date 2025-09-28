@@ -1,7 +1,7 @@
 import { Types } from "mongoose";
 
 export interface ICourse {
-  courseId: string;
+  // courseId?: string;
   title: string;
   slug: string;
   category: Types.ObjectId;
@@ -11,7 +11,8 @@ export interface ICourse {
   rating?: number;
   totalRating?: number;
   totalStudentEnroll?: number;
-  mentor: Types.ObjectId;
+  // mentor: Types.ObjectId;
+  mentor: String;
   courseStart: Date;
   duration: number;
   lectures: number;
@@ -23,4 +24,6 @@ export interface ICourse {
   courseIncludes: string[];
   softwareIncludes: string[];
   jobOption: string[];
+  createdAt?: Date;
+  updatedAt?: Date;
 }

@@ -3,7 +3,7 @@ import { ICourse } from "./course.interface";
 
 const courseSchema = new Schema<ICourse>(
   {
-    courseId: { type: String, required: true },
+    // courseId: { type: String, required: true },
     title: { type: String, required: true },
     slug: { type: String, required: true, unique: true, trim: true },
     category: { type: Schema.Types.ObjectId, required: true, trim: true },
@@ -13,7 +13,8 @@ const courseSchema = new Schema<ICourse>(
     rating: { type: Number },
     totalRating: { type: Number },
     totalStudentEnroll: { type: Number },
-    mentor: { type: Schema.Types.ObjectId, required: true },
+    // mentor: { type: Schema.Types.ObjectId, required: true },
+    mentor: { type: String, required: true },
     courseStart: { type: Date, required: true },
     duration: { type: Number, required: true },
     lectures: { type: Number, required: true },
