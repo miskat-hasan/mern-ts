@@ -2,6 +2,7 @@ import { Types } from "mongoose";
 
 export interface ICourse {
   // courseId?: string;
+  id?:string;
   title: string;
   slug: string;
   category: Types.ObjectId;

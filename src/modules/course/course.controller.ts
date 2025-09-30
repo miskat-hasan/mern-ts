@@ -48,6 +48,25 @@ const getACourse = async (req: Request, res: Response) => {
   });
 };
 
+const updateCourse = async (req: Request, res: Response) => {
+  const id = req.params.id;
+
+  if (!id) {
+    return res.status(400).json({
+      success: false,
+      message: "Course ID is requied.",
+    });
+  }
+
+  const course = await CourseServices.updateCourseService(id, req.body);
+
+  res.status(202).json({
+    success: true,
+    message: "Course successfully updated.",
+    course,
+  });
+};
+
 const deleteCourse = async (req: Request, res: Response) => {
   const id = req.params.id;
 
@@ -70,5 +89,6 @@ export const CousreController = {
   createCourse,
   getAllCourse,
   getACourse,
+  updateCourse,
   deleteCourse,
 };

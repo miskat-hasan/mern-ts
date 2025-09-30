@@ -13,13 +13,18 @@ const getACourseService = async (id: string) => {
   return await CourseModel.findById(id);
 };
 
+const updateCourseService = async (id: string, PayLoad: ICourse) => {
+  return await CourseModel.findByIdAndUpdate(id, PayLoad);
+};
+
 const deleteCourseService = async (id: string) => {
-  return await CourseModel.findByIdAndDelete(id);
+  await CourseModel.findByIdAndDelete(id);
 };
 
 export const CourseServices = {
   createCourseService,
   getAllCourseService,
   getACourseService,
-  deleteCourseService
+  updateCourseService,
+  deleteCourseService,
 };
